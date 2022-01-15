@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Test dark mode</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+    </head>
+    <body id="body">
+        <div id="container">
+        <label class="name" id="label">Dark mode</label>
+        <label class="switch">
+            
+            <input type="checkbox" id="dark">
+            <span class="slider round"></span>
+          </label>
+        </div>
+
+        <div class="textbox"></div>
+
+          <style>
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 36px;
+  height: 20px;
+  top:2px;
+}
+ 
+.switch input {display:none;}
+ 
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+ 
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+ 
+input:checked + .slider {
+  background-color: #2196F3;
+}
+ 
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+ 
+input:checked + .slider:before {
+  -webkit-transform: translateX(16px);
+  -ms-transform: translateX(16px);
+  transform: translateX(16px);
+}
+ 
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+ 
+.slider.round:before {
+  border-radius: 50%;
+}
+
+body{
+    background-color:white;
+}
+
+.name{
+    color:black;
+    margin-right: 20px;
+    font-family:'Segoe UI',sans-serif;
+}
+          </style>
+
+          <script language="JavaScript" type="text/javascript">
+              var congtac=document.getElementById('dark');
+
+              var page=document.getElementById('body');
+
+              var chu=document.getElementById('label');
+
+              congtac.onchange=function(){              
+                if (this.checked){
+                  page.style.background="#111111";
+                  chu.style.color="white";
+              }
+              else{
+                  page.style.background="white";
+                  chu.style.color="black";
+              };
+            };
+          </script>
+    </body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "name": "bang-ve-con-coc",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "formidable": "^2.0.1"
+  },
+  "author": "",
+  "license": "ISC"
+}

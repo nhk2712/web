@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="exam.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <header>Bài kiểm tra giữa kì môn Toán</header>
+    <div id="clock">
+        <span id="clock-wrap">
+            <label style="color:black; font-weight:normal; font-size:20px; margin-right: 5px;">Thời gian còn lại:</label>
+            <span id="hr"></span>
+            <span>:</span>
+            <span id="min"></span>
+            <span>:</span>
+            <span id="sec"></span>
+        </span>
+    </div>
+
+    <form id="form" action="" method="post" name="form">
+        <div id="q1" class="quest">
+            <p>Câu hỏi 1: 1 + 1 = ?</p>
+            <input type="radio" name="q1" id="q1a"> <label>A. 1</label> <br/>
+            <input type="radio" name="q1" id="q1b"> <label>B. 2</label> <br/>
+            <input type="radio" name="q1" id="q1c"> <label>C. 3</label> <br/>
+            <input type="radio" name="q1" id="q1d"> <label>D. 4</label> <br/>
+        </div>
+
+        <div id="q2" class="quest">
+            <p>Câu hỏi 2: Giải phương trình sau: x + 1 = 0?</p>
+            <input type="radio" name="q2" id="q2a"> <label>A. -1</label> <br/>
+            <input type="radio" name="q2" id="q2b"> <label>B. -2</label> <br/>
+            <input type="radio" name="q2" id="q2c"> <label>C. -3</label> <br/>
+            <input type="radio" name="q2" id="q2d"> <label>D. -4</label> <br/>
+        </div>
+    </form>
+
+
+    <div id="btn">
+        <button id="stop">Nộp bài</button>
+    </div>
+    
+
+    <script src="countdown.js"></script>
+</body>
+
+</html>

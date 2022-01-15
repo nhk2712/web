@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Game cua Khanh</title>
+    </head>
+
+    <body>
+        <div id="bg" class="container">
+            <div id="obj"></div>
+        </div>
+        <style>
+            div[id="bg"]
+            {
+                width: 200px;
+                height: 200px;
+                border: 3px solid black;
+                position: relative;
+            }
+
+            div[id="obj"]
+            {
+                width: 50px;
+                height: 50px;
+                background-color: red;
+                position:absolute;
+                transition-duration: 800ms;
+            }
+        </style>
+
+        <script>
+            var pos=0;
+            var root=0;
+            var obj = document.getElementById("obj");
+
+            function left()
+            {
+                pos-=50;
+                obj.style.marginLeft = pos+"px";
+            }
+
+            function right()
+            {
+                pos+=50;
+                obj.style.marginLeft = pos+"px";
+            }
+            
+            function up()
+            {
+                root-=50;
+                obj.style.marginTop = root+"px";
+            }
+            
+            function down()
+            {
+                root+=50;
+                obj.style.marginTop = root + "px";
+            }
+
+            if (obj.style.marginTop==150 & obj.style.marginLeft==150)
+            {
+                alert("congratulation!");
+            }
+        </script>
+
+    <button onclick="left();">
+        Left
+    </button>
+    <button onclick="right();">
+        Right
+    </button>
+
+    <button onclick="up();">
+        Up
+    </button>
+
+    <button onclick="down();">
+        Down
+    </button>
+
+        <select name="color" id="color">
+            <option value="0">Red</option>
+            <option value="1">Blue</option>
+        </select>
+
+        <script>
+            var a=document.getElementById("color");
+            var b=a.value;
+            var c=document.getElementById("obj");
+
+            if (b==0)
+            {
+                c.style.color="red";
+            }
+
+            if (b==1)
+            {
+                c.style.color="blue";
+                c.style.setAttribute("color:blue");
+            }
+        </script>
+    </body>
+</html>

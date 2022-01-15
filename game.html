@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div id="main">
+            <div id="bullet-area">
+                <section id="bullet"></section>
+            </div>
+            <div id="target-area">
+                <section id="target"></section>
+            </div>
+        </div>
+
+        <div id="control">
+            <button id="up">Up</button>
+            <button id="down">Down</button>
+            <button id="shot">Shot</button>
+        </div>
+
+        <div id="info"></div>
+
+        <style>
+            #bullet-area{
+                height: 100%;
+                float: left;
+                width: 50%;
+                position:relative;
+            }
+
+            #target-area{
+                float: left;                
+                height: 100%;
+                width: 50%;
+                position:relative;
+            }
+
+            #main{
+                height: 500px;
+                width: 1000px;
+            }
+
+            #bullet{
+                width:50px;
+                height: 50px;
+                position: relative;
+                background-color: blue;
+                animation: BulMov 3s infinite;
+            }
+
+            #target{
+                width:50px;
+                height: 50px;
+                position: absolute;
+                background-color: red;
+                animation: TarMov 2s infinite;
+            }
+
+            @keyframes BulMov{
+                0%{top:0px}
+                50%{top:400px}
+                100%{top:0px}
+            }
+
+            @keyframes TarMov{
+                0%{top:0px}
+                50%{top:400px}
+                100%{top:0px}
+            }
+
+            @keyframes BulShot{
+                0%{left:0px}
+                100%{left: 450px}
+            }
+        </style>
+
+        <script>
+            var bul=document.getElementById('bullet');
+            var tar=document.getElementById('target');
+
+            let bultop=bul.style.top;
+
+            document.getElementById('shot').onclick=function(){
+                bul.style.top=bultop;
+                bul.style.animationName="BulShot";
+                bul.style.animationDuration="3s";
+                bul.style.animationIterationCount="1";
+                bul.style.left="450px";
+
+                if(bul.style.left==="450px"){
+                    if(bul.style.top===tar.style.top){
+                        alert("win");
+                    }
+                }
+            }
+
+            document.getElementById('info').innerHTML=tar.style.top;
+        </script>
+    </body>
+</html>

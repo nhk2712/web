@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <title>Web cua Khanh</title>
+    <head>
+        <link rel="stylesheet" href="submit.css">
+        <link rel="stylesheet" href="textinp.css">
+        <link rel="shortcut icon" href="coder.jpg">
+    </head>
+    
+    <body>
+        <canvas id="myCanvas" width="800" height="600" style="border:1px solid #000000;background-color: #fffbc7;"> </canvas>
+
+        <script>
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            
+            ctx.font = "48px Arial";
+            ctx.fillColor = "#000000"; //Phai doi mau truoc
+            ctx.fillText("Hello World",200,100);
+
+            ctx.fillColor = "#ffffff";
+            ctx.fillRect(50,150,150,75);
+        </script>
+        
+    </body>
+    <footer>
+        <input type="button" text="Hello" name="A" onclick="alert('Hello')">
+        <input type="submit">
+        <input type="checkbox">
+        <input type="color">
+        <input type="date">
+        <input type="datetime">
+        <input type="datetime-local">
+        <input type="email">
+        <input type="image" src="">
+        <input type="month">
+        <input type="number">
+        <input type="password">
+        <input type="radio" style="color:#000000">
+        <input type="range">
+        <input type="reset">
+        <input type="search">
+        <input type="submit">
+        <input type="tel">
+        <input type="text">
+        <input type="time">
+        <input type="url">
+        <input type="week">
+        <input type="fieldset">
+        <input type="optgroup">
+    </footer>
+
+    <x>
+        <select>
+            <option value=0>hello</option>
+            <option value=1>hi</option>
+        </select>
+        <form name="form1">
+            <input id="test" name="test" type="text" placeholder="type something...">
+            <input id="send" type="submit" onclick="printvalue()">
+        </form>
+        <style>
+            
+            /* */
+            
+
+        </style>
+        <script>
+            function printvalue()
+            {
+                var a=document.form1.test.value;
+                alert('You typed: ' + a);
+            }
+        </script>
+    </x>
+
+    <animate>
+        <div id="hlmng">Hello mọi người</div>
+        <style>
+            div[id="hlmng"]
+            {
+                text-align: center;
+                font-size: 70px;
+                font-family:'Segoe UI', Tahoma, Verdana, sans-serif;
+                margin: 50px;
+                padding:2px;
+                opacity: 70%;
+                color: red;
+                transition:font-size 500ms;
+            }
+            div[id="hlmng"]:hover
+            {
+                opacity: 100%;
+                font-size:72px;
+                padding:none;
+            }
+        </style>
+    </animate>
+
+    <web>
+        <div class="wrap">
+            <div id="header">
+                Head
+            </div>
+
+            <div class="main">
+                <div class="nav">A</div>
+                <div class="content">B</div>
+            </div>
+
+            <div id="footer">
+                Foot
+            </div>
+        </div>
+    </web>
+</html>

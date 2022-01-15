@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div id="block">A</div>
+        <select id="chon" onchange="changeColor()">
+            <option value="0" text="Red">Red</option>
+            <option value="1" text="Blue">Blue</option>
+        </select>
+        <button onclick="changeColor()">Done</button>
+        <style>
+            #block
+            {
+                width:100px;
+                height:100px;
+                background-color: red;
+            }
+        </style>
+        <script>
+            var chon = document.getElementById("chon");
+            var value=chon.options[0].value;
+
+            var block = document.getElementById("block");
+            var color = block.style.backgroundColor;
+
+            function changeColor()
+            {
+                if (value==='0')
+                {
+                    color="red"; alert('red');
+                }
+
+                else if (value==='1')
+                {
+                    color="blue"; alert('blue');
+                }
+            }
+
+            function change()
+            {
+                color="blue";
+                block.style.color="white";
+                block.style.backgroundColor="blue";
+            }
+            
+        </script>
+    </body>
+</html>

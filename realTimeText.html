@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <textarea id="inp" rows="5" cols="20"></textarea>
+    <div id="out"></div><iframe id="frame" src="text.txt"></iframe>
+
+    <script>
+        var frame = document.getElementById('frame')
+
+        var inp = document.getElementById('inp')
+        var out = document.getElementById('out')
+
+        //inp.innerText = frame.body.innerText
+
+        setInterval(() => {
+            out.innerText = inp.value
+        }, 100)
+    </script>
+
+    <style>
+        #inp {
+            border: 2px solid lightgrey;
+            border-radius: 10px;
+            outline: none;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+            transition: all 0.5s;
+            padding: 5px;
+        }
+
+        #inp:focus {
+            border: 2px solid rgb(39, 169, 255);
+        }
+    </style>
+
+    <script>
+        var file = new FileReader("text.html");
+
+    </script>
+</body>
+
+</html>

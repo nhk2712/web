@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div id="block" onclick="alert('Win!')"></div>
+
+        <style>
+            #block{
+                position: relative;
+                width: 50px;
+                height: 50px;
+                background-color:red;
+                animation: Ani 4s infinite;
+                cursor: pointer;
+            }
+
+            @keyframes Ani{
+                0%{top:0px; left:0px;}
+                25%{top:0px;left:500px}
+                50%{top:500px;left:500px}
+                75%{top:500px;left:0px;}
+                100%{top:0px;left:0px;}
+            }
+        </style>
+    </body>
+</html>

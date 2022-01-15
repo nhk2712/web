@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body id="body">
+        <button id="light"><img src="light.png" draggable="false"></button>
+        <button id="dark"><img src="dark.png" draggable="false"></button>
+
+        <style>
+            button{
+                outline:none;
+                border:none;
+                cursor:pointer;
+                width:100px;
+                height:100px;
+                border-radius:10px;
+                transition:0.2s;
+                position:relative;
+                
+            }
+
+            button#dark{
+                background:gray;
+                animation: aniDark 500ms;
+                top: 20px;
+            }
+
+            button#light{
+                background:#dddd;
+                animation: aniLight 500ms;
+                margin-top: 20px;
+            }
+
+            @keyframes aniLight{
+                0% {top:20px}
+                100%{top:0px}
+            }
+
+            @keyframes aniDark{
+                0%{top:0px}
+                100%{top:20px}
+            }
+        </style>
+
+        <script>
+            var light = document.getElementById('light');
+
+            var dark = document.getElementById('dark');
+
+            var bg = document.getElementById('body');
+
+            bg.replaceChild(light, dark);
+
+            light.onclick = function() {
+                bg.replaceChild(dark, light);
+                bg.style.background="black";
+            }
+
+            dark.onclick = function() {
+                bg.replaceChild(light, dark);
+                bg.style.background="white";
+            }
+        </script>
+    </body>
+</html>

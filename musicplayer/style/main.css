@@ -1,0 +1,225 @@
+body{
+    background-color: lightcyan;
+    user-select: none;
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 500px;
+    padding: 20px 50px 20px 50px;
+    margin: auto;
+    border-radius: 20px;
+    height:100%;
+}
+
+#container,#title,#artist,#artwork{
+    transition: all 0.5s;
+}
+
+#title,#artist{
+    color:white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin:5px;
+}
+
+h1{
+    font-size:50px;
+}
+
+h3{
+    font-size:30px;
+}
+
+#time{
+    width:100%;
+    transform: translateY(-3px);
+}
+
+/*Thiết lập style cho ranger slider*/
+input[type="range"] {
+  -webkit-appearance: none;
+  height: 7px;
+  border-radius: 5px;  
+  background:white;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+/*Thiết kế phần để kéo trượt trong rangerslider -- dùng -webkit- để chạy trên Chrome, Opera, Safari, Edge*/
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%; 
+  background: DodgerBlue;
+  cursor: pointer;
+}
+
+/*-moz- dùng để thiết kế rangerslider trên firefox nhé*/
+input[type="range"]::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: DodgerBlue;
+  cursor: pointer;
+}
+
+#audtime{
+    display: flex;
+    width:100%;
+    justify-content:space-between;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:white;
+    font-size:20px;
+    margin:20px 0px 20px 0px;
+}
+
+#timerange{
+    width:60%;
+}
+
+.control,#repeat,#playlistBtn,#closeList{
+    background-color: transparent;
+    outline:none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.control:active,#repeat:active,#playlistBtn:active,#closeList:active{
+    transform: scale(0.8);
+}
+
+#menu{
+    display: flex;
+    width:100%;
+    justify-content:space-around;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px 0px 10px 0px;
+    color:white;
+    font-size:20px;
+}
+
+#volume{
+    transform: translateY(3px);
+}
+
+#repeat{
+    display: flex;
+    flex-direction: column;
+    color:white;
+    align-items: center;
+    width: 70px;
+    position: relative;
+    top:10px;
+}
+
+#playlistBtn{
+    width: 70px;
+}
+
+#loopIcon{
+    color:white;
+}
+
+#control{
+    display: flex;
+    justify-content:space-between;
+}
+
+#playlist{
+    position: absolute;
+    z-index: 1;
+    top:7px;
+    background-color: lightgreen;
+    border-radius: 20px;
+    width: 500px;
+    height: 621px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding:20px 50px 20px 50px;
+    display:none;
+}
+
+@keyframes show{
+    0%{opacity:0;transform: scale(1.1);}
+    100%{opacity:1;transform: scale(1);}
+}
+
+@keyframes hide{
+    0%{opacity:1;transform: scale(1);}
+    100%{opacity:0;transform: scale(1.1);}
+}
+
+#listTitle{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+.songTile{
+    width:100%;
+    transition:all 0.5s;
+    margin: 5px 0px 5px 0px;
+    border:none;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    padding: 5px 10px 3px 10px;
+    cursor: pointer;
+    background-color: transparent;
+    outline: none;
+}
+
+.songTile:active{
+    transform: scale(0.9);
+}
+
+.songInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    float:left;
+    transform: translateY(-3px);
+}
+
+.songArtwork{
+    width:50px;
+    float:left;
+}
+
+.songName{
+    font-weight: bold;
+    font-size: 23px;
+}
+
+.songArtist{
+    font-size: 17px;
+}
+
+.isPlaying{
+    float:right;
+    padding: 10px 0px 10px 0px;
+}
+
+#closeList{
+    width:fit-content;
+    height:fit-content;
+    margin:auto;
+    margin-top:20px;
+}
+
+#tiles{
+    overflow: auto;
+    height:480px;
+}
